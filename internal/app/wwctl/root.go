@@ -63,7 +63,7 @@ func rootPersistentPreRunE(cmd *cobra.Command, args []string) error {
 
 // GenBashCompletionFile
 func GenBashCompletion(w io.Writer) error {
-  return rootCmd.GenBashCompletion("out.sh")
+  return rootCmd.GenBashCompletion(w)
 }
 
 

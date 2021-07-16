@@ -4,8 +4,7 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"github.com/hpcng/warewulf/internal/wwctl"
+	"github.com/hpcng/warewulf/internal/app/wwctl"
 )
 
 func main() {
@@ -17,7 +16,7 @@ func main() {
 
 	defer fh.Close()
 
-	if err := root.GenBashCompletion(fh); err != nil {
+	if err := wwctl.GenBashCompletion(fh); err != nil {
 		fmt.Println(err)
 		return
 	}
