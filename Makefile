@@ -53,8 +53,8 @@ files: all
 	install -d -m 0755 $(DESTDIR)/etc/warewulf/
 	install -d -m 0755 $(DESTDIR)/etc/warewulf/ipxe
 	install -d -m 0755 $(DESTDIR)/var/lib/tftpboot/warewulf/ipxe/
-	install -d -m 0755 $(DESTDIR)/usr/share/bash-comletions/comletions
-	./bash_completion >$(DESTDIR)/usr/share/bash-comletions/comletions/wwctl
+	install -d -m 0755 $(DESTDIR)/etc/bash_completion.d/
+	./bash_completion  $(DESTDIR)/etc/bash_completion.d/warewulf
 	test -f $(DESTDIR)/etc/warewulf/warewulf.conf || install -m 644 etc/warewulf.conf $(DESTDIR)/etc/warewulf/
 	test -f $(DESTDIR)/etc/warewulf/hosts.tmpl || install -m 644 etc/hosts.tmpl $(DESTDIR)/etc/warewulf/
 	cp -r etc/dhcp $(DESTDIR)/etc/warewulf/
